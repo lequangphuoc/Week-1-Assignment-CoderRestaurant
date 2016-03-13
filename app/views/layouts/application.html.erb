@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CoderRestaurant</title>
+  <title>Mon Hue | Vietnamese Food</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+	<nav class="navbar navbar-default navbar-dark bg-inverse <%= 'navbar-shrink' if action_name == 'index' %>">
+	  <div class="container">
+	    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+		    &#9776;
+		</button>
+		  <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+		    <a class="navbar-brand" href="#">Mon Hue Restaurant</a>
+		    <ul class="nav navbar-nav pull-xs-right">		     
+		      <li class="nav-item">
+		        <%= link_to "home", root_path%>
+		      </li>
+		      <li class="nav-item">
+		        <%= link_to "menu", "/menu"%>
+		      </li>
+		      <li class="nav-item">
+		        <%= link_to "contact us", contact_us_path%>
+		      </li>
+		       <li class="nav-item">
+			    <a>order(0)</a>
+			  </li>
+		    </ul>
+		    
+		  </div>	
+	  </div>
+	  
+	</nav>
+	<%= yield %>
 
 </body>
 </html>
