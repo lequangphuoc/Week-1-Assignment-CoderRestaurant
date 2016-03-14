@@ -7,7 +7,7 @@
             </h4>
         </div>
         <div class="actions">
-        	<%= link_to "Add to meal", "", class: "btn btn-warning pull-xs-right" %>
+        	<%= link_to "Add to meal", new_product_order_path(product), class: "btn btn-warning pull-xs-right" %>
         	<h4><%= number_to_currency(product.price) %> VND</h4>
         </div>
         <div class="ratings">
