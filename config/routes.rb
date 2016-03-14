@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  get 'menu' => 'products#index'
   get 'contact_us' => 'welcome#contact_us'
+  resources :products, :orders
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

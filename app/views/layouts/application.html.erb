@@ -11,7 +11,7 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-default navbar-dark bg-inverse <%= 'navbar-shrink' if action_name == 'index' %>">
+	<nav class="navbar navbar-default navbar-dark bg-inverse <%= 'navbar-shrink' if controller_name == 'welcome' && action_name == 'index' %>">
 	  <div class="container">
 	    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
 		    &#9776;
@@ -23,14 +23,11 @@
 		        <%= link_to "home", root_path%>
 		      </li>
 		      <li class="nav-item">
-		        <%= link_to "menu", "/menu"%>
+		        <%= link_to "menu", menu_path%>
 		      </li>
 		      <li class="nav-item">
 		        <%= link_to "contact us", contact_us_path%>
 		      </li>
-		       <li class="nav-item">
-			    <a>order(0)</a>
-			  </li>
 		    </ul>
 		    
 		  </div>	
