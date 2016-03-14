@@ -5,7 +5,7 @@
 			<ul class="nav nav-pills">
 				<% @sections.each  do |section| %>
 				<li class="nav-item">
-						<%= link_to section, menu_path(section: section, sort_by: @curr_sort, key_word: @key_word), class: @curr_section == section ? 'nav-link active' : 'nav-link' %>
+						<%= link_to section, menu_path(section: section), class: @curr_section == section ? 'nav-link active' : 'nav-link' %>
 	  			</li>
 			<% end %>
 			</ul>
