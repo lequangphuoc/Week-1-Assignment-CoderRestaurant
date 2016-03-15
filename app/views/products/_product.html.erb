@@ -8,7 +8,7 @@
         </div>
         <div class="actions">
         	<%= link_to "Add to meal", new_product_order_path(product), class: "btn btn-warning pull-xs-right" %>
-        	<h4><%= number_to_currency(product.price) %> VND</h4>
+        	<h4><%= number_to_currency(product.price, :locale => :vi) %></h4>
         </div>
         <div class="ratings">
             <p class="pull-xs-right"><%= product.views %> views</p>

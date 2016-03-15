@@ -42,9 +42,9 @@
                             <tbody>
                                 <tr>
                                     <td><%= @product.name %></td>
-                                    <td class="text-center"><%= number_to_currency(@product.price) %> VND</td>
+                                    <td class="text-center"><%= number_to_currency(@product.price, :locale => :vi) %></td>
                                     <td class="text-center">1</td>
-                                    <td class="text-right"><%= number_to_currency(@product.price) %> VND</td>
+                                    <td class="text-right"><%= number_to_currency(@product.price, :locale => :vi) %></td>
                                 </tr>
                              
                             </tbody>

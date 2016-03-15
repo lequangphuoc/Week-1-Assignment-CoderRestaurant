@@ -4,7 +4,7 @@
             <div class="thumbnail">
                 <%= image_tag @product.photo, class: 'img-responsive' %>
                 <div class="caption-full">
-                    <h4 class="pull-xs-right"><%= number_to_currency(@product.price) %> VND</h4>
+                    <h4 class="pull-xs-right"><%= number_to_currency(@product.price, :locale => :vi) %></h4>
                     <h4><%= @product.name %>
                     </h4>
                     <p><%= @product.description %></p>
